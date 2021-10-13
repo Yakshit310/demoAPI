@@ -14,5 +14,5 @@ app.post("/",(req,res)=>{
     res.render("res",{apiKey:req.body.apiKey})
 })
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening on port ${port}`));
