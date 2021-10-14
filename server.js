@@ -11,7 +11,8 @@ app.get("/",(req,res)=>{
     res.render("index")
 })
 app.post("/",(req,res)=>{
-    res.render("res",{apiKey:req.body.apiKey})
+    var reqString = req.body.apiKey;
+    res.render("res",{apiKey:reqString})
 })
 
 const port = process.env.PORT || 8080;

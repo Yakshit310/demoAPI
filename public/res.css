@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: -webkit-linear-gradient(180deg,#bdc6ec,#9563ec);
+    background-image: -webkit-linear-gradient(180deg,#424242,#1a1a1a);
 }
 
 #flexContainer1{

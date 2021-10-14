@@ -2,14 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>DemoAPI</title>
     <link rel="stylesheet" href="index.css">
     
 </head>
 <body>
-    <form id="formContainer" method="POST" action="/">
+    <form name="ApiForm" id="formContainer" method="POST" action="/" onsubmit="return validateForm()">
         <textarea id="box1" name="apiKey" maxlength="100" placeholder="Enter text here" rows="10" cols="50"></textarea>
         <input id="box2" type="submit" value="submit">
     </form>
+
+    <script>
+        function validateForm() {
+          let x = document.forms["ApiForm"]["apiKey"].value;
+          if (x == "") {
+            alert("Text area should not be empty");
+            return false;
+          }
+        }
+    </script>
 </body>
 </html>
