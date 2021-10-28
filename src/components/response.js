@@ -3,12 +3,13 @@ import "./response.css"
 
 class Response extends Component {
   render() {
-    console.log(this.props);
     return (
-      <div className="flexContainer1">
-        <div className="flexContainer2">
-            <p className="box1">{this.props.location.state.state}</p>
-            <p className="box2">KEY</p>
+      <div className="RESflexContainer1">
+        <div className="RESflexContainer2">
+            <p className="RESbox1">{this.props.location.state.state}</p>
+            <button className="RESbox2" onClick={() => {navigator.clipboard.writeText(this.props.location.state.state)}}>
+              COPY
+            </button>
         </div>
       </div>
     );
