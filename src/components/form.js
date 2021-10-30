@@ -26,15 +26,9 @@ class Form extends Component {
     })
   };
 
-  handleKeyPress = (e) =>{
-    if(e.key === "Enter"){
-      console.log(e);
-    }
-  };
-
   render() {
     return (
-        <div onKeyDown={this.handleKeyPress}>
+        <div>
             <form className="formContainer" onSubmit={this.onSubmitHandler}>
                 <textarea required min="1" className="FORMbox1" onChange={(e) => {this.setState({ content: e.target.value })}} value={this.state.content} maxLength="1000" placeholder="Enter text here" rows="10" cols="50"/>
                 <button className="FORMbox2" type="submit" onClick={this.onSubmitHandler}>Submit</button>
